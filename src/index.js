@@ -46,10 +46,10 @@ module.exports = function (options) {
   assert.optionalBool(options.allowCredentialsAllOrigins, 'options.allowCredentialsAllOrigins')
   assert.optionalArrayOfString(options.allowHeaders, 'options.allowHeaders')
   assert.optionalArrayOfString(options.exposeHeaders,
-                                 'options.exposeHeaders')
+    'options.exposeHeaders')
   assert.optionalNumber(options.preflightMaxAge, 'options.preflightMaxAge')
   assert.optionalObject(options.preflightStrategy,
-                          'options.preflightStrategy')
+    'options.preflightStrategy')
 
   var opts = options
   opts.origins = options.origins || ['*']
@@ -61,16 +61,16 @@ module.exports = function (options) {
   if (!opts.allowCredentialsAllOrigins) {
     assert.ok(options.origins.indexOf('*') === -1 ||
                 options.credentials === false,
-                'credentials not supported with wildcard')
+    'credentials not supported with wildcard')
   }
 
-  constants['EXPOSE_HEADERS'].forEach(function (h) {
+  constants.EXPOSE_HEADERS.forEach(function (h) {
     if (opts.exposeHeaders.indexOf(h) === -1) {
       opts.exposeHeaders.push(h)
     }
   })
 
-  constants['ALLOW_HEADERS'].forEach(function (h) {
+  constants.ALLOW_HEADERS.forEach(function (h) {
     if (opts.allowHeaders.indexOf(h) === -1) {
       opts.allowHeaders.push(h)
     }

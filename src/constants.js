@@ -31,10 +31,10 @@ const constants = {
   HTTP_NO_CONTENT: 204
 }
 
-constants['STR_VARY_DETAILS'] = [
-  constants['STR_ORIGIN'],
-  constants['AC_REQ_METHOD'],
-  constants['AC_REQ_HEADERS']
+constants.STR_VARY_DETAILS = [
+  constants.STR_ORIGIN,
+  constants.AC_REQ_METHOD,
+  constants.AC_REQ_HEADERS
 ].join(',')
 
 module.exports = constants
