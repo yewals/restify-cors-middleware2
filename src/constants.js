@@ -1,4 +1,4 @@
-module.exports = {
+const constants = {
   ALLOW_HEADERS: [
     'accept',
     'accept-version',
@@ -30,3 +30,11 @@ module.exports = {
   STR_ORIGIN: 'origin',
   HTTP_NO_CONTENT: 204
 }
+
+constants.STR_VARY_DETAILS = [
+  constants.STR_ORIGIN,
+  constants.AC_REQ_METHOD,
+  constants.AC_REQ_HEADERS
+].join(',')
+
+module.exports = constants

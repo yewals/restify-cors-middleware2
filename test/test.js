@@ -17,7 +17,7 @@ exports.corsServer = function (corsConfig) {
 
 exports.noHeader = function (name) {
   return function (res) {
-    if (res.headers.hasOwnProperty(name)) {
+    if (Object.prototype.hasOwnProperty.call(res.headers, name)) {
       return 'Should not have header ' + name
     }
   }
