@@ -100,4 +100,15 @@ describe('CORS: simple / actual requests', function () {
       test.corsServer({})
     })
   })
+
+  it('Sets the vary header when origin not present', function (done) {
+    var server = test.corsServer({
+      origins: ['http://api.myapp.com', 'http://www.myapp.com']
+    })
+    request(server)
+        .get('/test')
+        .expect('vary', 'origin,access-control-request-method,access-control-request-headers')
+        .expect(200)
+        .end(done)
+  })
 })
