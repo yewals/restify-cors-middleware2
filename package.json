@@ -1,7 +1,7 @@
 {
-  "name": "restify-cors-middleware",
-  "version": "1.1.1",
-  "author": "Tabcorp Digital Technology Team",
+  "name": "restify-cors-middleware2",
+  "version": "2.0.0",
+  "author": "Datatrac Corporation",
   "license": "MIT",
   "description": "CORS middleware with full W3C spec support",
   "keywords": [
@@ -12,10 +12,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/TabDigital/restify-cors-middleware.git"
+    "url": "https://github.com/DatatracCorporation/restify-cors-middleware.git"
   },
   "bugs": {
-    "url": "https://github.com/TabDigital/restify-cors-middleware/issues"
+    "url": "https://github.com/DatatracCorporation/restify-cors-middleware/issues"
   },
   "main": "src/index.js",
   "scripts": {
